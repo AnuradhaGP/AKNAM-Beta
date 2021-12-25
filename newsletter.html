@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Letter</title>
+    <!-- External CSS file link -->
+    <link rel="stylesheet" href="./styles/newsletter.css">
+    <link rel="stylesheet" href="./styles/main.css">
+    <script src="https://kit.fontawesome.com/14133e36cb.js" crossorigin="anonymous"></script>
+    
+</head>
+
+<body class='newsletter_subscribers' data-controller='modal' data-no-turbolink id='newsletter_subscribers-new'>
+    
+    <div class="wrapper">
+        <nav class="nav-bar">
+            <ul class="start-nav">
+                <li><a href="#">
+                    <i class="fas fa-bars"></i>
+                </a></li>
+                <li><a href="./index.html">FRONTPAGE</a></li>
+                <li><a href="./regions.html">REGION</a></li>
+                <li><a href="./market.html">MARKETS</a></li>
+                <li><a href="./newsletter.html">NEWSLETTER</a></li>
+            </ul>
+            <ul class="end-nav">
+                <li class="btn-item">
+                    <input type="search" class="search-box" placeholder="Search" >
+                    <i class="fas fa-search"></i>
+                </li>
+                <li class="btn-item">SUBMIT STARTUP</li>
+                <li class="btn-item">POST A JOB</li>
+                <li class="btn-item">SIGN IN</li>
+                <li class="btn-item">JOIN</li>
+            </ul>
+            
+        </nav>
+    </div>
+    <section class='content-wrapper subscription-wrapper'>
+        <div class='newsletterPromo'>
+            <div>
+                <h1>Don't miss out on the next big thing.</h1>
+                <h2>Receive a daily digest of the newest startups</h2>
+                <form class="simple_form new_newsletter_subscriber" id="new_newsletter_subscriber"
+                    novalidate="novalidate" action="/newsletter" accept-charset="UTF-8" method="post"><input
+                        type="hidden" name="authenticity_token"
+                        value="IjkwWZ18IlM9FMILY1X0L/y/g9qolFQQ4lfzty9F3B6bv0HTfrv7ugOEoLNSOWdg3lV1Slr3C31Ac2KRiJK7XQ==" />
+                    <div class="input email required newsletter_subscriber_email"><label class="email required"
+                            for="newsletter_subscriber_email"><abbr title="required">*</abbr> Email</label><input
+                            class="string email required" required="required" aria-required="true"
+                            placeholder="Your email address" type="email" name="newsletter_subscriber[email]"
+                            id="newsletter_subscriber_email" /></div>
+                    <input type="submit" name="commit" value="Get early access" data-disable-with="Get early access" />
+                </form>
+                <p>Great content, no spam, easy unsubscribe</p>
+            </div>
+            <div>
+                <p class='previous'>Some of the startups we previously wrote about before they launched.</p>
+                <img
+                    src="./newsletter.webp" />
+            </div>
+        </div>
+    </section>
+    <div class='modal2Backdrop hidden' data-modal-target='backdrop'></div>
+    <div class='modal2 hidden' data-modal-id='join' data-modal-target='modal'>
+        <a class="modal2__close" data-action="modal#close" href="#">×</a>
+        <div class='modal2__inner'>
+            <div class='modal2__header'>Join BetaList</div>
+            <div class='modal2__body'>BetaList is a place for early adopters to discover and try new startups and apps.
+            </div>
+            <div class='modal2__buttons'>
+                <a class="modal2__button" rel="nofollow" data-method="post" href="/users/auth/twitter">Sign up with
+                    Twitter</a>
+            </div>
+        </div>
+    </div>
+    <div class='modal2 hidden' data-modal-id='signin' data-modal-target='modal'>
+        <a class="modal2__close" data-action="modal#close" href="#">×</a>
+        <div class='modal2__inner'>
+            <div class='modal2__header'>Sign In</div>
+            <div class='modal2__body'>BetaList is a place for early adopters to discover and try new startups and apps.
+            </div>
+            <div class='modal2__buttons'>
+                <a class="modal2__button" rel="nofollow" data-method="post" href="/users/auth/twitter">Sign in with
+                    Twitter</a>
+            </div>
+        </div>
+    </div>
+    <div class='modal--signIn' data-behavior='sign-in-modal' style='display: none'>
+        <div class='modal--signIn__header'>
+            <div class='betaburger'>
+                <div class='betaburger__ingredients'></div>
+            </div>
+            <h1 class='modal--signIn__header__title'>Sign in to BetaList</h1>
+        </div>
+        <p>Connect with makers and early adopters exchanging product feedback and ideas.</p>
+        <p>Please use your personal Twitter account.</p>
+        <a data-behavior="sign-in-redirect-url"
+            class="button button--fullWidth button--noTextTransform button--withIcon button--twitter"
+            href="/users/auth/twitter">
+            <div class='button__icon button__icon--twitter'></div>
+            Sign in with Twitter
+        </a>
+        <p class='modal__subtle'>We won't post without asking</p>
+    </div>
+    <script src="./scripts/main.js"></script>
+</body>
+</html>
